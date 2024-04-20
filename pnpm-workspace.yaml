@@ -1,0 +1,4 @@
+packages:
+  - edge-middleware
+  - nextjs-rewrites
+  - rewrite-target

@@ -1,0 +1,7 @@
+{
+  "name": "next-rewrites-test",
+  "scripts": {
+    "dev:edge-middleware": "pnpm --filter=!nextjs-rewrites dev",
+    "dev:nextjs-rewrites": "pnpm --filter=!edge-middleware dev"
+  }
+}
