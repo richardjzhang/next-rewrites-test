@@ -5,12 +5,11 @@ const port = 4000;
 const app = new Hono();
 
 app.get("/foo", (c) => {
-  return c.text(
-    [
-      "Expected Host: localhost:3000",
-      `Received Host: ${c.req.header("Host")}`,
-    ].join("\n")
-  );
+  return c.text(["Foo without slash"].join("\n"));
+});
+
+app.get("/foo/", (c) => {
+  return c.text(["Foo with slash"].join("\n"));
 });
 
 serve({ fetch: app.fetch, port });
